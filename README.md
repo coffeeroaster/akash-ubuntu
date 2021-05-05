@@ -6,7 +6,7 @@ Update Dockerfile with your needs.
 # Note you can also use the prebuilt image at user994455/ubuntu-base:0.2
 $ docker build -t $your_dockerhub_user/ubuntu-base:0.2 .
 ```
-Update deply.yml with your newly built docker image. ( or keep the prebuilt image)
+Update deploy.yml with your newly built docker image. ( or keep the prebuilt image)
 ## Buy me a coffee to keep the work going
 
 | | |
@@ -26,6 +26,8 @@ $ssh-keygen -t rsa
 ## Update deploy.yml
 
 Copy and paste the contents of `$HOME/.ssh/id_rsa.pub` and paste them into deploy.yml (env -> pubkey). (deploy.yml : line 8). 
+NOTE: Make sure that you do not use any `"` around the pubkey as this will cause problems.
+
 
 ### Update resources as needed. Set the amount of RAM / CPU / diskspace as needed.
 
@@ -77,4 +79,4 @@ ssh -p $RANDOMPORT root@URL
 
 ### Debug
 
-If things are still not working you can set "debug=true" in the environment variables. This will cause sssd to run with debug mode to get additional info. As a side effect as soon as you close your session it will kill the SSH session.
+If things are still not working you can set "debug=true" in the environment variable section of deploy.yml. This will cause sshd to run with debug mode to get additional info. As a side effect as soon as you close your session it will kill the SSH session.

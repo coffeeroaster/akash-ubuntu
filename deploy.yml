@@ -6,7 +6,7 @@ services:
     image: user994455/ubuntu-base:0.2
     env:
       - sshport=22000
-      - pubkey="your_public_ssh_key_here"
+      - pubkey=your_public_ssh_key_here
     expose:
       - port: 22000
         as: 22000
