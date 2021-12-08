@@ -7,12 +7,6 @@ Update Dockerfile with your needs.
 $ docker build -t $your_dockerhub_user/ubuntu-base:0.2 .
 ```
 Update deploy.yml with your newly built docker image. ( or keep the prebuilt image)
-## Buy me a coffee to keep the work going
-
-| | |
---- | --- 
-|akash:|`akash1k07dv0wcjej4e4a5z9dg3c6yvvf9mcnz0sacp9`|
-|monero:| `88z2xaJaRPVc5VXtE3CArxeAkqSQV8aA4EhswR8pqfY3CghQfaD7nYsLvmcnXuHj1TYDeJaGvyyyW9XyX6ka7BLzQ7ypmqJ`|
 
 ## Prepare your ssh session
 
